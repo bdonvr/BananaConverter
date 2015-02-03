@@ -22,6 +22,7 @@ public class MeasurementFactory
 	public final static String MEASURE_PRESSURE		= "Pressure";
 	public final static String MEASURE_SPEED		= "Speed";
 	public final static String MEASURE_RADIATION    = "Radiation";
+	public final static String MEASURE_ANGLE        = "Angle Measurments";
 
 	public final static String UNIT_LENGTH_CM       = "centimeter";
 	public final static String UNIT_LENGTH_METER    = "meter";
@@ -84,6 +85,10 @@ public class MeasurementFactory
 	public final static String UNIT_RADIATION_RAD     = "rad";
 	public final static String UNIT_RADIATION_BANANA  = "banana";
 	
+	public final static String UNIT_ANGLE_DEGREES   = "degrees";
+	public final static String UNIT_ANGLE_RADIANS   = "radians";
+	public final static String UNIT_ANGLE_GRADIANS  = "gradians";
+	public final static String UNIT_ANGLE_BANANGLES = "banangles";
 	
 	private Map<String, Measurement> measurements;
 	private static MeasurementFactory instance = null;
@@ -223,10 +228,21 @@ public class MeasurementFactory
 		//Radiation
 		//   The reference will be REM
 		//
-		Measurement radiationMeasurments = new Measurement(MEASURE_RADIATION);
-		radiationMeasurments.addUnit(new MeasurementUnit(UNIT_RADIATION_REM));
-		radiationMeasurments.addUnit(new MeasurementUnit(UNIT_RADIATION_RAD, 1/1.041666));
-		radiationMeasurments.addUnit(new MeasurementUnit(UNIT_RADIATION_BANANA, 1/0.0001));
+		Measurement radiationMeasurements = new Measurement(MEASURE_RADIATION);
+		radiationMeasurements.addUnit(new MeasurementUnit(UNIT_RADIATION_REM));
+		radiationMeasurements.addUnit(new MeasurementUnit(UNIT_RADIATION_RAD, 1/1.041666));
+		radiationMeasurements.addUnit(new MeasurementUnit(UNIT_RADIATION_BANANA, 1/0.0001));
+		
+		//
+		//Angular Measure
+		//   The reference will be Degrees
+		//
+		Measurement angleMeasurements = new Measurement(MEASURE_ANGLE);
+		angleMeasurements.addUnit(new MeasurementUnit(UNIT_ANGLE_DEGREES));
+		angleMeasurements.addUnit(new MeasurementUnit(UNIT_ANGLE_RADIANS, 1.0/57.2957795));
+		angleMeasurements.addUnit(new MeasurementUnit(UNIT_ANGLE_GRADIANS, 1.0/0.9));
+		angleMeasurements.addUnit(new MeasurementUnit(UNIT_ANGLE_BANANGLES, 1.0/11));
+		
 		
 		//
 		// Populate the map
@@ -239,6 +255,7 @@ public class MeasurementFactory
 		//this.measurements.put(MEASURE_POWER, 		powerMeasurements);
 		//this.measurements.put(MEASURE_PRESSURE, 	pressureMeasurements);
 		this.measurements.put(MEASURE_SPEED, 	    speedMeasurements);
-		this.measurements.put(MEASURE_RADIATION,    radiationMeasurments);
+		this.measurements.put(MEASURE_RADIATION,    radiationMeasurements);
+		this.measurements.put(MEASURE_ANGLE,        angleMeasurements);
 	}
 }
