@@ -165,7 +165,7 @@ public class MeasurementFactory
 		volumeMeasurements.addUnit(new MeasurementUnit(UNIT_VOLUME_PINT,      8.0/3.7854));
 		volumeMeasurements.addUnit(new MeasurementUnit(UNIT_VOLUME_CUP,       16.0/3.7854));
 		volumeMeasurements.addUnit(new MeasurementUnit(UNIT_VOLUME_OUNCE,     128.0/3.7854));
-		volumeMeasurements.addUnit(new MeasurementUnit(UNIT_VOLUME_BANANA,    1.0/0.709765)); //1 cup mashed banana
+		volumeMeasurements.addUnit(new MeasurementUnit(UNIT_VOLUME_BANANA,    1.0/0.0788627)); //1/3 cup mashed banana ~1 banana
 
 		//
 		// Area
