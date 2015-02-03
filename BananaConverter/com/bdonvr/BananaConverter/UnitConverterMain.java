@@ -472,8 +472,8 @@ public class UnitConverterMain
 	       ARG_AREA_SQ_FOOT   + "\t square feet\n\t" +
 	       ARG_AREA_SQ_YARD   + "\t square yards\n\t" +
 	       ARG_AREA_SQ_MILE   + "\t square miles\n\t" +
-	       ARG_AREA_ACRE      + "\t acres\n" +
-	       ARG_AREA_SQ_BANANA + "\t square bananas (BROKEN!)\n" +
+	       ARG_AREA_ACRE      + "\t acres\n\t" +
+	       ARG_AREA_SQ_BANANA + "\t square bananas\n\t" +
 	       
 	       "\nSpeed:\n\t" +
 	       ARG_SPEED_KMH                + "\t kilometers per hour\n\t" +

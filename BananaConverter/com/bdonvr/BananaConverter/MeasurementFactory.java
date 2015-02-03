@@ -186,7 +186,7 @@ public class MeasurementFactory
 		areaMeasurements.addUnit(new MeasurementUnit(UNIT_AREA_SQ_YARD,   Math.pow((100.0/(12.0*3.0*2.54)), 2)));
 		areaMeasurements.addUnit(new MeasurementUnit(UNIT_AREA_SQ_MILE,   Math.pow((100.0/(12.0*5280.0*2.54)), 2)));
 		areaMeasurements.addUnit(new MeasurementUnit(UNIT_AREA_ACRE,      Math.pow((100.0/(12.0*5280.0*2.54)), 2)*640.0));
-		areaMeasurements.addUnit(new MeasurementUnit(UNIT_AREA_SQ_BANANA, Math.pow(0.19812, 2))); //see banana length (squared) Broken?
+		areaMeasurements.addUnit(new MeasurementUnit(UNIT_AREA_SQ_BANANA, Math.pow((100.0/(19.812)), 2))); //see banana length
 
 		//
 		// Power
