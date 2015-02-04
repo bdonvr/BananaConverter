@@ -1,4 +1,3 @@
-
 package com.bdonvr.BananaConverter;
 
 import java.util.Set;
@@ -23,6 +22,7 @@ public class MeasurementFactory
 	public final static String MEASURE_SPEED		= "Speed";
 	public final static String MEASURE_RADIATION    = "Radiation";
 	public final static String MEASURE_ANGLE        = "Angle Measurments";
+	public final static String MEASURE_STORAGE      = "Digital Storage";
 
 	public final static String UNIT_LENGTH_CM       = "centimeter";
 	public final static String UNIT_LENGTH_METER    = "meter";
@@ -89,6 +89,17 @@ public class MeasurementFactory
 	public final static String UNIT_ANGLE_RADIANS   = "radians";
 	public final static String UNIT_ANGLE_GRADIANS  = "gradians";
 	public final static String UNIT_ANGLE_BANANGLES = "banangles";
+	
+	public final static String UNIT_STORAGE_BYTES       = "bytes (B)";
+	public final static String UNIT_STORAGE_KILOBYTES   = "kilobytes (KB)";
+	public final static String UNIT_STORAGE_MEGABYTES   = "megabytes (MB)";
+	public final static String UNIT_STORAGE_GIGABYTES   = "gigabytes (GB)";
+	public final static String UNIT_STORAGE_TERABYTES   = "terabytes (TB)";
+	public final static String UNIT_STORAGE_BANANAS     = "bananabytes (BA)";
+	public final static String UNIT_STORAGE_KILOBANANAS = "kilobananas (KBA)";
+	public final static String UNIT_STORAGE_MEGABANANAS = "megabananas (MBA)";
+	public final static String UNIT_STORAGE_GIGABANANAS = "gigabananas (GBA)";
+	public final static String UNIT_STORAGE_TERABANANAS = "terabananas (TBA)";
 	
 	private Map<String, Measurement> measurements;
 	private static MeasurementFactory instance = null;
@@ -243,6 +254,21 @@ public class MeasurementFactory
 		angleMeasurements.addUnit(new MeasurementUnit(UNIT_ANGLE_GRADIANS, 1.0/0.9));
 		angleMeasurements.addUnit(new MeasurementUnit(UNIT_ANGLE_BANANGLES, 1.0/11)); //Average ~11 degrees
 		
+		//
+		//Digital Storage
+		//   The reference will be Bytes
+		//
+		Measurement storageMeasurements = new Measurement(MEASURE_STORAGE);
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_BYTES));
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_KILOBYTES,   1.0/1024));
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_MEGABYTES,   1.0/1024000));
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_GIGABYTES,   1.0/1073741824));
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_TERABYTES,   1.0/1099511627776.0));
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_BANANAS,     1.0/8));
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_KILOBANANAS, 1.0/0.0078125));
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_MEGABANANAS, 1.0/0.00000762939));
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_GIGABANANAS, 1.0/0.0000000074506));
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_TERABANANAS, 1.0/0.000000000007276));
 		
 		//
 		// Populate the map
@@ -257,5 +283,6 @@ public class MeasurementFactory
 		this.measurements.put(MEASURE_SPEED, 	    speedMeasurements);
 		this.measurements.put(MEASURE_RADIATION,    radiationMeasurements);
 		this.measurements.put(MEASURE_ANGLE,        angleMeasurements);
+		this.measurements.put(MEASURE_STORAGE,      storageMeasurements);
 	}
 }
