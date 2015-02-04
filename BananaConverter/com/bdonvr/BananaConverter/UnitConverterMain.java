@@ -61,6 +61,11 @@ public class UnitConverterMain
 	private static final String ARG_SPEED_MS                 = "-ms";
 	private static final String ARG_SPEED_KNOTS              = "-kn";
 	private static final String ARG_SPEED_BANANAS_PER_SECOND = "-bps";
+	
+	private static final String ARG_ANGLE_DEGREES = "-dg";
+	private static final String ARG_ANGLE_RADIANS = "-rad";
+	private static final String ARG_ANGLE_GRADIANS = "-gr";
+	private static final String ARG_ANGLE_BANANGLES = "-ba";
 
 	private static final String ARG_HELP_H        = "-h";
 	private static final String ARG_HELP          = "-help";
@@ -392,7 +397,30 @@ public class UnitConverterMain
 				input.measurementType = MeasurementFactory.MEASURE_SPEED;
 				input.measurementUnit = MeasurementFactory.UNIT_SPEED_BANANAS_PER_SECOND;
 			}
-		
+			
+			//
+			// Angle Measurements
+			//
+			else if(ARG_ANGLE_DEGREES.equals(argv))
+			{
+				input.measurementType = MeasurementFactory.MEASURE_ANGLE;
+				input.measurementUnit = MeasurementFactory.UNIT_ANGLE_DEGREES;
+			}
+			else if(ARG_ANGLE_RADIANS.equals(argv))
+			{
+				input.measurementType = MeasurementFactory.MEASURE_ANGLE;
+				input.measurementUnit = MeasurementFactory.UNIT_ANGLE_RADIANS;
+			}
+			else if(ARG_ANGLE_GRADIANS.equals(argv))
+			{
+				input.measurementType = MeasurementFactory.MEASURE_ANGLE;
+				input.measurementUnit = MeasurementFactory.UNIT_ANGLE_GRADIANS;
+			}
+			else if(ARG_ANGLE_BANANGLES.equals(argv))
+			{
+				input.measurementType = MeasurementFactory.MEASURE_ANGLE;
+				input.measurementUnit = MeasurementFactory.UNIT_ANGLE_BANANGLES;
+			}
 
 			//
 			// Other args
@@ -436,7 +464,7 @@ public class UnitConverterMain
 	       ARG_VOLUME_PINT   + "\t pints\n\t" +
 	       ARG_VOLUME_QUART  + "\t quarts\n\t" +
 	       ARG_VOLUME_CUP    + "\t cups\n" +
-	       ARG_VOLUME_BANANA + "\t bananas (per cup)\n" +
+	       ARG_VOLUME_BANANA + "\t bananas\n" +
 
 	       "\nTemperatures:\n\t" +
 	       ARG_TEMP_CELSIUS     + "\t degrees celsius\n\t" +
@@ -481,6 +509,12 @@ public class UnitConverterMain
 	       ARG_SPEED_MS                 + "\t meters per second\n\t" +
 	       ARG_SPEED_KNOTS              + "\t knots (nautical miles)\n\t" +
 	       ARG_SPEED_BANANAS_PER_SECOND + "\t bananas per second\n\t" +
+	       
+		   "\nAngular Measure:\n\t" +
+		   ARG_ANGLE_DEGREES   + "\t degrees\n\t" +
+		   ARG_ANGLE_RADIANS   + "\t radians\n\t" +
+		   ARG_ANGLE_GRADIANS  + "\t gradians\n\t" +
+		   ARG_ANGLE_BANANGLES + "\t banangles (Banana Angles)\n\t" +
 
 	       "\nOther Commands:\n\t" +
 	       ARG_HELP_H + "\t Display this message, same as: " + ARG_HELP + " and " + ARG_HELP_QMARK + "\n");

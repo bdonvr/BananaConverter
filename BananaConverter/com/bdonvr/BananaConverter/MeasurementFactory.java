@@ -60,7 +60,7 @@ public class MeasurementFactory
 	public final static String UNIT_AREA_SQ_MILE    = "square mile";
 	public final static String UNIT_AREA_ACRE       = "acre";
 	public final static String UNIT_AREA_HECTARE    = "hectare";
-	public final static String UNIT_AREA_SQ_BANANA  = "square banana (BROKEN!)";
+	public final static String UNIT_AREA_SQ_BANANA  = "square bananas";
 	
 	//public final static String UNIT_POWER_WATT		= "watt";
 	//public final static String UNIT_POWER_HORSEPOWER = "horsepower";
@@ -205,7 +205,7 @@ public class MeasurementFactory
 		//
 		// Pressure
 		//    The reference will be pascal
-		// Currently unable to find a way to connect to bananas!
+		// Currently unable to find a way to connect to bananas! (maybe pressure required to burst the peel?)
 		//Measurement pressureMeasurements = new Measurement(MEASURE_PRESSURE);
 		//pressureMeasurements.addUnit(new MeasurementUnit(UNIT_PRESSURE_PASCAL));
 		//pressureMeasurements.addUnit(new MeasurementUnit(UNIT_PRESSURE_ATMOSPHERE, 1.0/101325));
@@ -241,7 +241,7 @@ public class MeasurementFactory
 		angleMeasurements.addUnit(new MeasurementUnit(UNIT_ANGLE_DEGREES));
 		angleMeasurements.addUnit(new MeasurementUnit(UNIT_ANGLE_RADIANS, 1.0/57.2957795));
 		angleMeasurements.addUnit(new MeasurementUnit(UNIT_ANGLE_GRADIANS, 1.0/0.9));
-		angleMeasurements.addUnit(new MeasurementUnit(UNIT_ANGLE_BANANGLES, 1.0/11));
+		angleMeasurements.addUnit(new MeasurementUnit(UNIT_ANGLE_BANANGLES, 1.0/11)); //Average ~11 degrees
 		
 		
 		//

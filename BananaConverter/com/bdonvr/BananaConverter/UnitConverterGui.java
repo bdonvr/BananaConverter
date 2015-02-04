@@ -66,7 +66,7 @@ public class UnitConverterGui extends JFrame
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setTitle(WINDOW_TITLE);
 		this.setSize(MAIN_WIN_SIZE_X, MAIN_WIN_SIZE_Y);
-		this.setResizable(true);
+		this.setResizable(false);
 
 		comboHandler = new ComboHandler();
 		textHandler = new TextHandler();
