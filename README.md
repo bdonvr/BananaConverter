@@ -5,57 +5,79 @@ Based on https://github.com/bradyallenjohnson/UnitConverter
 
 Avialiable units:
 
+-Angular Measure
+<ul>
+<li>Banangles (Banana Angles) (Average Banana ~= 11 degrees.)</li>
+<li>Degrees</li>
+<li>Gradians</li>
+<li>Radians</li>
+</ul>
+
 -Area
-Acre
-Hectare
-Square Banana (Banana Lengths squared)
-Square Foot
-Square Inch
-Square KM
-Square Meter
-Square Mile
-Square Yard
+<ul>
+<li>Acre</li>
+<li>Hectare</li>
+<li>Square Banana (Banana Lengths squared)</li>
+<li>Square Foot</li>
+<li>Square Inch</li>
+<li>Square KM</li>
+<li>Square Meter</li>
+<li>Square Mile</li>
+<li>Square Yard</li>
+</ul>
 
 -Length
-Banana (Average banana length ~7.8 in)
-Centimeter
-Foot
-Inch
-Kilometer
-Meter
-Mile
+<ul>
+<li>Banana (Average banana length ~7.8 in)</li>
+<li>Centimeter</li>
+<li>Foot</li>
+<li>Inch</li>
+<li>Kilometer</li>
+<li>Meter</li>
+<li>Mile</li>
+</ul>
 
 -Radiation
-Banana (http://en.wikipedia.org/wiki/Banana_equivalent_dose)
-Rad
-Rem
+<ul>
+<li>Banana (http://en.wikipedia.org/wiki/Banana_equivalent_dose)</li>
+<li>Rad</li>
+<li>Rem</li>
+</ul>
 
 -Speed
-Bananas per Second (Banana lengths per second)
-Kilometers per Hour
-Knots
-Meters per Second
-Miles per Hour
+<ul>
+<li>Bananas per Second (Banana lengths per second)</li>
+<li>Kilometers per Hour</li>
+<li>Knots</li>
+<li>Meters per Second</li>
+<li>Miles per Hour</li>
+</ul>
 
 -Temperature
-Banana (Optimal growing temperature for bananas ~84 degrees fahrenheit)
-Celsius
-Fahrenheit
-Kelvin
+<ul>
+<li>Banana (Optimal growing temperature for bananas ~84 degrees fahrenheit)</li>
+<li>Celsius</li>
+<li>Fahrenheit</li>
+<li>Kelvin</li>
+</ul>
 
 -Volume
-Banana (~1/3 cup (mashed))
-Cup
-Gallon
-Liter
-Milliliter
-Ounce
-Pint
-Quart
+<ul>
+<li>Banana (~1/3 cup (mashed))</li>
+<li>Cup</li>
+<li>Gallon</li>
+<li>Liter</li>
+<li>Milliliter</li>
+<li>Ounce</li>
+<li>Pint</li>
+<li>Quart</li>
+</ul>
 
 -Weight
-Banana (Average banana weight)
-Gram
-Kilogram
-Ounce
-Pound
+<ul>
+<li>Banana (Average banana weight)</li>
+<li>Gram</li>
+<li>Kilogram</li>
+<li>Ounce</li>
+<li>Pound</li>
+</ul>
