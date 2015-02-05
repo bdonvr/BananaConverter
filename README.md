@@ -26,6 +26,20 @@ Avialiable units:
 <li>Square Yard</li>
 </ul>
 
+-Digital Storage
+<ul>
+<li>Bananabytes (Number of bytes to store the word 'banana'"</li>
+<li>Bytes</li>
+<li>gigabananas</li>
+<li>gigabytes</li>
+<li>kilobananas</li>
+<li>kilobytes</li>
+<li>megabananas</li>
+<li>megabytes</li>
+<li>terabananas</li>
+<li>terabytes</li>
+</ul>
+
 -Length
 <ul>
 <li>Banana (Average banana length ~7.8 in)</li>
