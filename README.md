@@ -28,7 +28,7 @@ Avialiable units:
 
 -Digital Storage
 <ul>
-<li>bananabytes (Number of bytes to store the word 'banana'"</li>
+<li>bananabytes (Number of bytes to store the word 'banana')</li>
 <li>bytes</li>
 <li>gigabananas</li>
 <li>gigabytes</li>
