@@ -260,15 +260,15 @@ public class MeasurementFactory
 		//
 		Measurement storageMeasurements = new Measurement(MEASURE_STORAGE);
 		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_BYTES));
-		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_KILOBYTES,   1.0/1024));
-		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_MEGABYTES,   1.0/1024000));
-		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_GIGABYTES,   1.0/1073741824));
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_KILOBYTES,   1.0/1024.0));
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_MEGABYTES,   1.0/1024000.0));
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_GIGABYTES,   1.0/1073741824.0));
 		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_TERABYTES,   1.0/1099511627776.0));
-		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_BANANAS,     1.0/8));
-		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_KILOBANANAS, 1.0/0.0078125));
-		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_MEGABANANAS, 1.0/0.00000762939));
-		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_GIGABANANAS, 1.0/0.0000000074506));
-		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_TERABANANAS, 1.0/0.000000000007276));
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_BANANAS,     1.0/7.0)); //7 bytes to store the word banana
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_KILOBANANAS, 1.0/7168.0));
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_MEGABANANAS, 1.0/7343000.0));
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_GIGABANANAS, 1.0/7518000000.0));
+		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_TERABANANAS, 1.0/7700000000000.0));
 		
 		//
 		// Populate the map

@@ -66,6 +66,17 @@ public class UnitConverterMain
 	private static final String ARG_ANGLE_RADIANS = "-rad";
 	private static final String ARG_ANGLE_GRADIANS = "-gr";
 	private static final String ARG_ANGLE_BANANGLES = "-ba";
+	
+	private static final String ARG_STORAGE_BYTE       = "-b";
+	private static final String ARG_STORAGE_KILOBYTE   = "-kb";
+	private static final String ARG_STORAGE_MEGABYTE   = "-mb";
+	private static final String ARG_STORAGE_GIGABYTE   = "-gb";
+	private static final String ARG_STORAGE_TERABYTE   = "-tb";
+	private static final String ARG_STORAGE_BANANA     = "-bb";
+	private static final String ARG_STORAGE_KILOBANANA = "-kbb";
+	private static final String ARG_STORAGE_MEGABANANA = "-mbb";
+	private static final String ARG_STORAGE_GIGABANANA = "-gbb";
+	private static final String ARG_STORAGE_TERABANANA = "-tbb";
 
 	private static final String ARG_HELP_H        = "-h";
 	private static final String ARG_HELP          = "-help";
@@ -421,6 +432,62 @@ public class UnitConverterMain
 				input.measurementType = MeasurementFactory.MEASURE_ANGLE;
 				input.measurementUnit = MeasurementFactory.UNIT_ANGLE_BANANGLES;
 			}
+			
+			//
+			// Digital Storage
+			//
+			else if(ARG_STORAGE_BYTE.equals(argv))
+			{
+				input.measurementType = MeasurementFactory.MEASURE_STORAGE;
+				input.measurementUnit = MeasurementFactory.UNIT_STORAGE_BYTES;
+			}
+			else if(ARG_STORAGE_KILOBYTE.equals(argv))
+			{
+				input.measurementType = MeasurementFactory.MEASURE_STORAGE;
+				input.measurementUnit = MeasurementFactory.UNIT_STORAGE_KILOBYTES;
+			}
+			else if(ARG_STORAGE_MEGABYTE.equals(argv))
+			{
+				input.measurementType = MeasurementFactory.MEASURE_STORAGE;
+				input.measurementUnit = MeasurementFactory.UNIT_STORAGE_MEGABYTES;
+			}
+			else if(ARG_STORAGE_GIGABYTE.equals(argv))
+			{
+				input.measurementType = MeasurementFactory.MEASURE_STORAGE;
+				input.measurementUnit = MeasurementFactory.UNIT_STORAGE_GIGABYTES;
+			}
+			else if(ARG_STORAGE_TERABYTE.equals(argv))
+			{
+				input.measurementType = MeasurementFactory.MEASURE_STORAGE;
+				input.measurementUnit = MeasurementFactory.UNIT_STORAGE_TERABYTES;
+			}
+			else if(ARG_STORAGE_BANANA.equals(argv))
+			{
+				input.measurementType = MeasurementFactory.MEASURE_STORAGE;
+				input.measurementUnit = MeasurementFactory.UNIT_STORAGE_BANANAS;
+			}
+			else if(ARG_STORAGE_KILOBANANA.equals(argv))
+			{
+				input.measurementType = MeasurementFactory.MEASURE_STORAGE;
+				input.measurementUnit = MeasurementFactory.UNIT_STORAGE_KILOBANANAS;
+			}
+			else if(ARG_STORAGE_MEGABANANA.equals(argv))
+			{
+				input.measurementType = MeasurementFactory.MEASURE_STORAGE;
+				input.measurementUnit = MeasurementFactory.UNIT_STORAGE_MEGABANANAS;
+			}
+			else if(ARG_STORAGE_GIGABANANA.equals(argv))
+			{
+				input.measurementType = MeasurementFactory.MEASURE_STORAGE;
+				input.measurementUnit = MeasurementFactory.UNIT_STORAGE_GIGABANANAS;
+			}
+			else if(ARG_STORAGE_TERABANANA.equals(argv))
+			{
+				input.measurementType = MeasurementFactory.MEASURE_STORAGE;
+				input.measurementUnit = MeasurementFactory.UNIT_STORAGE_TERABANANAS;
+			}
+
+			
 
 			//
 			// Other args
@@ -515,6 +582,18 @@ public class UnitConverterMain
 		   ARG_ANGLE_RADIANS   + "\t radians\n\t" +
 		   ARG_ANGLE_GRADIANS  + "\t gradians\n\t" +
 		   ARG_ANGLE_BANANGLES + "\t banangles (Banana Angles)\n\t" +
+		   
+		   "\nAngular Measure:\n\t" +
+           ARG_STORAGE_BYTE       + "\t bytes\n\t" +
+           ARG_STORAGE_KILOBYTE   + "\t kilobytes\n\t" +
+           ARG_STORAGE_MEGABYTE   + "\t megabytes\n\t" +
+           ARG_STORAGE_GIGABYTE   + "\t gigabytes\n\t" +
+           ARG_STORAGE_TERABYTE   + "\t terabytes\n\t" +
+           ARG_STORAGE_BANANA     + "\t banana\n\t" +
+           ARG_STORAGE_KILOBANANA + "\t kilobanana\n\t" +
+           ARG_STORAGE_MEGABANANA + "\t megabanana\n\t" +
+           ARG_STORAGE_GIGABANANA + "\t gigabanana\n\t" +
+           ARG_STORAGE_TERABANANA + "\t terabanana\n\t" +
 
 	       "\nOther Commands:\n\t" +
 	       ARG_HELP_H + "\t Display this message, same as: " + ARG_HELP + " and " + ARG_HELP_QMARK + "\n");
