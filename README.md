@@ -28,16 +28,16 @@ Avialiable units:
 
 -Digital Storage
 <ul>
-<li>bananabytes (Number of bytes to store the word 'banana')</li>
-<li>bytes</li>
-<li>gigabananas</li>
-<li>gigabytes</li>
-<li>kilobananas</li>
-<li>kilobytes</li>
-<li>megabananas</li>
-<li>megabytes</li>
-<li>terabananas</li>
-<li>terabytes</li>
+<li>Bananabytes (Number of bytes to store the word 'banana')</li>
+<li>Bytes</li>
+<li>Gigabananas</li>
+<li>Gigabytes</li>
+<li>Kilobananas</li>
+<li>Kilobytes</li>
+<li>Megabananas</li>
+<li>Megabytes</li>
+<li>Terabananas</li>
+<li>Terabytes</li>
 </ul>
 
 -Length
