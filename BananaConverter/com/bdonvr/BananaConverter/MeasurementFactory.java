@@ -110,7 +110,7 @@ public class MeasurementFactory
 	public final static String UNIT_CURRENCY_INR = "Indian Rupee";
 	public final static String UNIT_CURRENCY_AUD = "Australian Dollars";
 	public final static String UNIT_CURRENCY_CAD = "Canadian Dollars";
-	public final static String UNIT_CURRENCY_SGD = "Singapore Dollars";
+	public final static String UNIT_CURRENCY_BAN = "Banana Pounds";
 	public final static String UNIT_CURRENCY_JPY = "Japanese Yen";
 	public final static String UNIT_CURRENCY_CNY = "Chinese Yuan";
 	public final static String UNIT_CURRENCY_RUB = "Russian Ruble";
@@ -297,7 +297,7 @@ public class MeasurementFactory
 		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_INR, 1.0*rate.getRate("INR")));
 		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_AUD, 1.0*rate.getRate("AUD")));
 		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_CAD, 1.0*rate.getRate("CAD")));
-		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_SGD, 1.0*rate.getRate("SGD")));
+		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_BAN, 1.0/0.6)); //66 cents per pound (average)
 		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_JPY, 1.0*rate.getRate("JPY")));
 		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_CNY, 1.0*rate.getRate("CNY")));
 		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_RUB, 1.0*rate.getRate("RUB")));
