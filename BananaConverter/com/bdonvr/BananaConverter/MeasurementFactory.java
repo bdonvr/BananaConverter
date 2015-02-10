@@ -4,6 +4,7 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.Map;
 
+import com.bdonvr.BananaConverter.units.MeasurementUnitCurrency;
 import com.bdonvr.BananaConverter.units.MeasurementUnitFahrenheit;
 import com.bdonvr.BananaConverter.units.MeasurementUnitKelvin;
 //import com.bdonvr.BananaConverter.units.MeasurementUnitMileageKPL;
@@ -23,6 +24,7 @@ public class MeasurementFactory
 	public final static String MEASURE_RADIATION    = "Radiation";
 	public final static String MEASURE_ANGLE        = "Angle Measurments";
 	public final static String MEASURE_STORAGE      = "Digital Storage";
+	public final static String MEASURE_CURRENCY     = "Currency";
 
 	public final static String UNIT_LENGTH_CM       = "centimeter";
 	public final static String UNIT_LENGTH_METER    = "meter";
@@ -36,6 +38,7 @@ public class MeasurementFactory
 	public final static String UNIT_WEIGHT_KG       = "kilogram";
 	public final static String UNIT_WEIGHT_POUND    = "pound";
 	public final static String UNIT_WEIGHT_OUNCE    = "ounce";
+	public final static String UNIT_WEIGHT_TON      = "metric ton";
 	public final static String UNIT_WEIGHT_BANANA   = "banana";
 
 	public final static String UNIT_VOLUME_LITER     = "liter";
@@ -101,6 +104,17 @@ public class MeasurementFactory
 	public final static String UNIT_STORAGE_GIGABANANAS = "gigabananas (GBA)";
 	public final static String UNIT_STORAGE_TERABANANAS = "terabananas (TBA)";
 	
+	public final static String UNIT_CURRENCY_USD = "U.S. Dollars";
+	public final static String UNIT_CURRENCY_EUR = "Euros";
+	public final static String UNIT_CURRENCY_GBP = "British Pounds";
+	public final static String UNIT_CURRENCY_INR = "Indian Rupee";
+	public final static String UNIT_CURRENCY_AUD = "Australian Dollars";
+	public final static String UNIT_CURRENCY_CAD = "Canadian Dollars";
+	public final static String UNIT_CURRENCY_SGD = "Singapore Dollars";
+	public final static String UNIT_CURRENCY_JPY = "Japanese Yen";
+	public final static String UNIT_CURRENCY_CNY = "Chinese Yuan";
+	public final static String UNIT_CURRENCY_RUB = "Russian Ruble";
+	
 	private Map<String, Measurement> measurements;
 	private static MeasurementFactory instance = null;
 
@@ -153,9 +167,10 @@ public class MeasurementFactory
 		//
 		Measurement weightMeasurements = new Measurement(MEASURE_WEIGHT);
 		weightMeasurements.addUnit(new MeasurementUnit(UNIT_WEIGHT_GRAM));
-		weightMeasurements.addUnit(new MeasurementUnit(UNIT_WEIGHT_KG,    0.001));
-		weightMeasurements.addUnit(new MeasurementUnit(UNIT_WEIGHT_POUND, 2.2/1000.0));
-		weightMeasurements.addUnit(new MeasurementUnit(UNIT_WEIGHT_OUNCE, (2.2*16.0)/1000.0));
+		weightMeasurements.addUnit(new MeasurementUnit(UNIT_WEIGHT_KG,     0.001));
+		weightMeasurements.addUnit(new MeasurementUnit(UNIT_WEIGHT_POUND,  2.2/1000.0));
+		weightMeasurements.addUnit(new MeasurementUnit(UNIT_WEIGHT_OUNCE,  (2.2*16.0)/1000.0));
+		weightMeasurements.addUnit(new MeasurementUnit(UNIT_WEIGHT_TON,    1.0/1000000));
 		weightMeasurements.addUnit(new MeasurementUnit(UNIT_WEIGHT_BANANA, 1.0/120)); //average 120 grams
 
 		//
@@ -271,6 +286,24 @@ public class MeasurementFactory
 		storageMeasurements.addUnit(new MeasurementUnit(UNIT_STORAGE_TERABANANAS, 1.0/7700000000000.0));
 		
 		//
+		//Currency
+		//	The reference will be U.S. Dollars (USD)
+		//
+		Measurement currencyMeasurements = new Measurement(MEASURE_CURRENCY);
+		MeasurementUnitCurrency rate = new MeasurementUnitCurrency();
+		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_USD));
+		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_EUR, 1.0*rate.getRate("EUR")));
+		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_GBP, 1.0*rate.getRate("GBP")));
+		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_INR, 1.0*rate.getRate("INR")));
+		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_AUD, 1.0*rate.getRate("AUD")));
+		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_CAD, 1.0*rate.getRate("CAD")));
+		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_SGD, 1.0*rate.getRate("SGD")));
+		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_JPY, 1.0*rate.getRate("JPY")));
+		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_CNY, 1.0*rate.getRate("CNY")));
+		currencyMeasurements.addUnit(new MeasurementUnit(UNIT_CURRENCY_RUB, 1.0*rate.getRate("RUB")));
+		
+		
+		//
 		// Populate the map
 		//
 		this.measurements.put(MEASURE_LENGTH,       lengthMeasurements);
@@ -284,5 +317,6 @@ public class MeasurementFactory
 		this.measurements.put(MEASURE_RADIATION,    radiationMeasurements);
 		this.measurements.put(MEASURE_ANGLE,        angleMeasurements);
 		this.measurements.put(MEASURE_STORAGE,      storageMeasurements);
+		this.measurements.put(MEASURE_CURRENCY,     currencyMeasurements);
 	}
 }

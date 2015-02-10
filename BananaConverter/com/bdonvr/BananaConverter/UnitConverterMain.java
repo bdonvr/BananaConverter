@@ -599,7 +599,7 @@ public class UnitConverterMain
 	       ARG_HELP_H + "\t Display this message, same as: " + ARG_HELP + " and " + ARG_HELP_QMARK + "\n");
 	}
 
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		MeasurementFactory factory = MeasurementFactory.instance();
 		factory.load();
