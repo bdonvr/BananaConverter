@@ -33,7 +33,8 @@ public class MeasurementFactory
 	public final static String UNIT_LENGTH_FOOT     = "foot";
 	public final static String UNIT_LENGTH_MILE     = "mile";
 	public final static String UNIT_LENGTH_BANANA   = "banana";
-
+	public final static String UNIT_LENGTH_MILLIMETER     = "millimeter";
+	
 	public final static String UNIT_WEIGHT_GRAM     = "gram";
 	public final static String UNIT_WEIGHT_KG       = "kilogram";
 	public final static String UNIT_WEIGHT_POUND    = "pound";
@@ -159,6 +160,7 @@ public class MeasurementFactory
 		lengthMeasurements.addUnit(new MeasurementUnit(UNIT_LENGTH_INCH,   1.0/2.54));
 		lengthMeasurements.addUnit(new MeasurementUnit(UNIT_LENGTH_FOOT,   1.0/(12.0*2.54)));
 		lengthMeasurements.addUnit(new MeasurementUnit(UNIT_LENGTH_MILE,   1.0/(2.54*12*5280.0)));
+		lengthMeasurements.addUnit(new MeasurementUnit(UNIT_LENGTH_MILLIMETER,   1.0/0.01));
 		lengthMeasurements.addUnit(new MeasurementUnit(UNIT_LENGTH_BANANA, 1.0/19.812)); //average 7.8 in
 
 		//
