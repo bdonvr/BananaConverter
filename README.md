@@ -26,6 +26,21 @@ Avialiable units:
 <li>Square Yard</li>
 </ul>
 
+-Currency (Live exchange rate updates via internet!)
+<ul>
+<li>Australian Dollars (AUD)</li>
+<li>Banana Pounds (BAN) (Average price of 1 lb. Bananas.)</li>
+<li>British Pounds (GBP)</li>
+<li>Canadian Dollars (CAD)</li>
+<li>Chinese Yuan (CNY)</li>
+<li>Euros (EUR)</li>
+<li>Indian Rupee (INR)</li>
+<li>Japanese Yen (JPY)</li>
+<li>Russian Ruble (RUB)</li>
+<li>U.S. Dollar (USD)</li>
+
+</ul>
+
 -Digital Storage
 <ul>
 <li>Bananabytes (Number of bytes to store the word 'banana')</li>
@@ -48,6 +63,7 @@ Avialiable units:
 <li>Inch</li>
 <li>Kilometer</li>
 <li>Meter</li>
+<li>Millimeter</li>
 <li>Mile</li>
 </ul>
 
