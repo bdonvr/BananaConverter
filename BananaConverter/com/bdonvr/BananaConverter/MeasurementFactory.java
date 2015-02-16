@@ -1,5 +1,7 @@
 package com.bdonvr.BananaConverter;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.Map;
@@ -141,8 +143,28 @@ public class MeasurementFactory
 
 	public Measurement getMeasurement(final String measurementType)
 	{
+		if(measurementType.equals(MEASURE_CURRENCY))
+			if(!isInternetReachable())
+				//Give an Error if user has no Internet connection.
+				UnitConverterGui.ErrorMessage("Currency conversion requires an active Internet connection.");
 		return this.measurements.get(measurementType);
 	}
+	
+	public static boolean isInternetReachable()
+    {
+        try {
+            URL url = new URL("http://www.google.com");
+            HttpURLConnection urlConnect = (HttpURLConnection)url.openConnection();
+            @SuppressWarnings("unused")
+			Object objData = urlConnect.getContent();
+
+        } catch (Exception e) {              
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
 
 	//
 	// Later on, this will use Spring to load everything

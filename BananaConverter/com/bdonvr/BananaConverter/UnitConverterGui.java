@@ -49,6 +49,10 @@ public class UnitConverterGui extends JFrame
 		this.measurementFactory = measurementFactory;
 		this.initFlag = false;
 	}
+	
+	public static void ErrorMessage(String error){
+		JOptionPane.showMessageDialog(null, error);
+	}
 
 	// Disallow the default constructor
 	private UnitConverterGui()
@@ -276,7 +280,7 @@ public class UnitConverterGui extends JFrame
 					refValue = unit.convertToReference(Double.parseDouble(value));
 				}
 				catch(NumberFormatException ex) {
-					JOptionPane.showMessageDialog(null, "A valid number must be entered: " + ex.getMessage());
+					ErrorMessage("A valid number must be entered: " + ex.getMessage());
 					clearFields(true);
 					return;
 				}
