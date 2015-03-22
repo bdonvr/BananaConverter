@@ -85,7 +85,7 @@ Avialiable units:
 
 -Temperature
 <ul>
-<li>Banana (Optimal growing temperature for bananas ~84 degrees fahrenheit)</li>
+<li>Banana (1/100th of the optimal growing temperature for bananas ~84 degrees fahrenheit)</li>
 <li>Celsius</li>
 <li>Fahrenheit</li>
 <li>Kelvin</li>

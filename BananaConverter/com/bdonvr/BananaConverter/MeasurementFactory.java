@@ -20,22 +20,22 @@ public class MeasurementFactory
 	public final static String MEASURE_VOLUME       = "Volume";
 	public final static String MEASURE_MILEAGE      = "Gas Mileage";
 	public final static String MEASURE_AREA         = "Area";
-	public final static String MEASURE_POWER		= "Power";
-	public final static String MEASURE_PRESSURE		= "Pressure";
-	public final static String MEASURE_SPEED		= "Speed";
+	public final static String MEASURE_POWER	= "Power";
+	public final static String MEASURE_PRESSURE	= "Pressure";
+	public final static String MEASURE_SPEED	= "Speed";
 	public final static String MEASURE_RADIATION    = "Radiation";
 	public final static String MEASURE_ANGLE        = "Angle Measurments";
 	public final static String MEASURE_STORAGE      = "Digital Storage";
 	public final static String MEASURE_CURRENCY     = "Currency";
 
-	public final static String UNIT_LENGTH_CM       = "centimeter";
-	public final static String UNIT_LENGTH_METER    = "meter";
-	public final static String UNIT_LENGTH_KM       = "kilometer";
-	public final static String UNIT_LENGTH_INCH     = "inch";
-	public final static String UNIT_LENGTH_FOOT     = "foot";
-	public final static String UNIT_LENGTH_MILE     = "mile";
-	public final static String UNIT_LENGTH_BANANA   = "banana";
-	public final static String UNIT_LENGTH_MILLIMETER     = "millimeter";
+	public final static String UNIT_LENGTH_CM         = "centimeter";
+	public final static String UNIT_LENGTH_METER      = "meter";
+	public final static String UNIT_LENGTH_KM         = "kilometer";
+	public final static String UNIT_LENGTH_INCH       = "inch";
+	public final static String UNIT_LENGTH_FOOT       = "foot";
+	public final static String UNIT_LENGTH_MILE       = "mile";
+	public final static String UNIT_LENGTH_BANANA     = "banana";
+	public final static String UNIT_LENGTH_MILLIMETER = "millimeter";
 	
 	public final static String UNIT_WEIGHT_GRAM     = "gram";
 	public final static String UNIT_WEIGHT_KG       = "kilogram";
@@ -81,10 +81,10 @@ public class MeasurementFactory
 	//public final static String UNIT_PRESSURE_PSI 	= "psi";
 	//public final static String UNIT_PRESSURE_TORR 	= "torr";
 	
-	public final static String UNIT_SPEED_KM_PER_HOUR = "kilometers per hour";
-	public final static String UNIT_SPEED_MILES_PER_HOUR = "miles per hour";
-	public final static String UNIT_SPEED_METERS_PER_SECOND = "meters per second";
-	public final static String UNIT_SPEED_KNOTS = "knots";
+	public final static String UNIT_SPEED_KM_PER_HOUR        = "kilometers per hour";
+	public final static String UNIT_SPEED_MILES_PER_HOUR     = "miles per hour";
+	public final static String UNIT_SPEED_METERS_PER_SECOND  = "meters per second";
+	public final static String UNIT_SPEED_KNOTS              = "knots";
 	public final static String UNIT_SPEED_BANANAS_PER_SECOND = "bananas per second";
 	
 	public final static String UNIT_RADIATION_REM     = "rem";
@@ -206,7 +206,7 @@ public class MeasurementFactory
 		temperatureMeasurements.addUnit(new MeasurementUnit(UNIT_TEMP_CELSIUS));
 		temperatureMeasurements.addUnit(new MeasurementUnitFahrenheit(UNIT_TEMP_FAHRENHEIT));
 		temperatureMeasurements.addUnit(new MeasurementUnitKelvin(UNIT_TEMP_KELVIN));
-		temperatureMeasurements.addUnit(new MeasurementUnit(UNIT_TEMP_BANANA, 1.0/28.0)); //Optimal growing temperature for bananas
+		temperatureMeasurements.addUnit(new MeasurementUnit(UNIT_TEMP_BANANA, 100.0/28.0)); //1 degree = 1/100th of the optimal growing temperature for bananas
 		
 		//
 		// Volume
